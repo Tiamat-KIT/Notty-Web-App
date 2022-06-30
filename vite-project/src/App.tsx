@@ -1,6 +1,6 @@
 //import { useState } from 'react'
 //import logo from './logo.svg'
-import  { Navbar,Container, Nav, NavDropdown } from 'react-bootstrap';
+import  { Navbar,Nav,Row,Col,Card } from 'react-bootstrap';
 
 
 function App() {
@@ -16,8 +16,22 @@ function App() {
               <Nav.Link href="#link">Link</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          
       </Navbar>
+      <Row xs={2} md={2} className="g-2">
+        {Array.from({ length: 8 }).map((_, idx) => (
+        <Col>
+          <Card>
+            <Card.Img variant="top" src="https://thumb.ac-illust.com/6c/6c49457122b22005a8dcacaac54d2c17_t.jpeg" />
+            <Card.Body >
+            <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                Event 
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        ))}
+      </Row>
     </div>
   )
 }
